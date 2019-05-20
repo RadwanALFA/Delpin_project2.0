@@ -72,7 +72,7 @@ namespace Delpin_project
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("User name or Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
