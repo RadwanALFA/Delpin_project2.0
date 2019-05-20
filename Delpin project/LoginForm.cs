@@ -53,6 +53,11 @@ namespace Delpin_project
         {
             try
             {
+                if (passwordtxtbox.Text.Length == 0 || username_txtbox.Text.Length == 0)
+                {
+                    MessageBox.Show("Enter User name and Passward", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
                 if (passwordtxtbox.Text.Equals(dataBaseManager.GetPassword(username_txtbox.Text.ToString())))
                 {
                     this.Hide();
