@@ -90,6 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateBooking2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBooking2.Designer.cs">
+      <DependentUpon>CreateBooking2.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrePrivCusControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,8 +126,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Staff.cs" />
+    <Compile Include="UpdateDeleteBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDeleteBooking.Designer.cs">
+      <DependentUpon>UpdateDeleteBooking.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BookingSystem.resx">
       <DependentUpon>BookingSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateBooking2.resx">
+      <DependentUpon>CreateBooking2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrePrivCusControl.resx">
       <DependentUpon>CrePrivCusControl.cs</DependentUpon>
@@ -142,6 +157,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdateDeleteBooking.resx">
+      <DependentUpon>UpdateDeleteBooking.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

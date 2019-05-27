@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delpin project", "Delpin project\Delpin project.csproj", "{38CD2469-B716-4B3E-B18A-425AA89E53D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateBooking", "..\CreateBooking\CreateBooking\CreateBooking.csproj", "{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpdaterSletBooking", "..\OpdaterSletBooking\OpdaterSletBooking\OpdaterSletBooking.csproj", "{EA28660D-990E-49BE-AB5C-FB814EC62C7D}"
 EndProject
 Global
@@ -31,18 +29,6 @@ Global
 		{38CD2469-B716-4B3E-B18A-425AA89E53D3}.test|Any CPU.Build.0 = test|Any CPU
 		{38CD2469-B716-4B3E-B18A-425AA89E53D3}.test|x86.ActiveCfg = test|x86
 		{38CD2469-B716-4B3E-B18A-425AA89E53D3}.test|x86.Build.0 = test|x86
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.Debug|x86.Build.0 = Debug|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.Release|x86.ActiveCfg = Release|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.Release|x86.Build.0 = Release|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.test|Any CPU.ActiveCfg = Release|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.test|Any CPU.Build.0 = Release|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.test|x86.ActiveCfg = Release|Any CPU
-		{F87E11CB-4AC9-4B65-B5C4-A792657F33FC}.test|x86.Build.0 = Release|Any CPU
 		{EA28660D-990E-49BE-AB5C-FB814EC62C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EA28660D-990E-49BE-AB5C-FB814EC62C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA28660D-990E-49BE-AB5C-FB814EC62C7D}.Debug|x86.ActiveCfg = Debug|Any CPU

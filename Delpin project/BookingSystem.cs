@@ -48,6 +48,8 @@ namespace Delpin_project
         {
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
+            CreateBooking2 cb = new CreateBooking2();
+            cb.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
