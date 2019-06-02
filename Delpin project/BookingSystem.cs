@@ -48,33 +48,41 @@ namespace Delpin_project
         {
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-            CreateBooking2 cb = new CreateBooking2();
-            cb.ShowDialog();
+            CreateBooking createBooking = new CreateBooking();
+            createBooking.Dock = DockStyle.Fill;
+            ContainerPanel.Controls.Add(createBooking);
+            ContainerPanel.Controls["CreateBooking"].BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
+            ReservesUserControl ruc = new ReservesUserControl();
+            ruc.Dock = DockStyle.Fill;
+            ContainerPanel.Controls.Add(ruc);
+            ContainerPanel.Controls["ReservesUserControl"].BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             SidePanel.Height = button3.Height;
             SidePanel.Top = button3.Top;
+            UpdateOrDeleteBooking uodp = new UpdateOrDeleteBooking();
+            uodp.Dock = DockStyle.Fill;
+            BookingSystemForm.Instance.ContainerPanel.Controls.Add(uodp);
+            ContainerPanel.Controls["UpdateOrDeleteBooking"].BringToFront();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = button4.Height;
-            SidePanel.Top = button4.Top;
-
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
             SidePanel.Height = button5.Height;
             SidePanel.Top = button5.Top;
+            BranchOverView bov = new BranchOverView();
+            bov.Dock = DockStyle.Fill;
+            ContainerPanel.Controls.Add(bov);
+            ContainerPanel.Controls["BranchOverView"].BringToFront();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -84,6 +92,7 @@ namespace Delpin_project
             Customers_main_control Cmc = new Customers_main_control();
             Cmc.Dock = DockStyle.Fill;
             ContainerPanel.Controls.Add(Cmc);
+            ContainerPanel.Controls["Customers_main_control"].BringToFront();
         }
 
 
@@ -96,6 +105,15 @@ namespace Delpin_project
         {
             pictureBox2.Visible = false;
             _obj = this;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = button4.Height;
+            SidePanel.Top = button4.Top;
+            ProductOverView pov = new ProductOverView();
+            ContainerPanel.Controls.Add(pov);
+            ContainerPanel.Controls["ProductOverView"].BringToFront();
         }
     }
 }

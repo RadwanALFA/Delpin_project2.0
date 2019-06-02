@@ -14,8 +14,6 @@ namespace Delpin_project
 {
     public partial class loginForm : Form
     {
-         DataBaseManager dataBaseManager = new DataBaseManager();
-
         public loginForm()
         {
             InitializeComponent();
@@ -58,7 +56,7 @@ namespace Delpin_project
                     MessageBox.Show("Enter User name and Passward", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                if (passwordtxtbox.Text.Equals(dataBaseManager.GetPassword(username_txtbox.Text.ToString())))
+                if (passwordtxtbox.Text.Equals(DataBaseManager.dbmanager.GetPassword(username_txtbox.Text.ToString())))
                 {
                     this.Hide();
                     BookingSystemForm bookingSystem = new BookingSystemForm();
@@ -72,7 +70,7 @@ namespace Delpin_project
             catch (Exception ex)
             {
 
-                MessageBox.Show("User name or Password is incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
     }

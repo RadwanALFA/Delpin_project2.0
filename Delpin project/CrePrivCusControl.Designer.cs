@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CPRtxtBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.passtxtbox = new System.Windows.Forms.TextBox();
             this.regDateDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.usernametxrbox = new System.Windows.Forms.TextBox();
+            this.usernametxtbox = new System.Windows.Forms.TextBox();
             this.teleftxtbox = new System.Windows.Forms.TextBox();
             this.Emailtxtbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,12 +49,12 @@
             this.Lnametxtbox = new System.Windows.Forms.TextBox();
             this.nametxtbox = new System.Windows.Forms.TextBox();
             this.Savebtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.addresstxtbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,13 +64,16 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSize = true;
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.CPRtxtBox);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.passtxtbox);
             this.groupBox1.Controls.Add(this.regDateDatePicker);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.usernametxrbox);
+            this.groupBox1.Controls.Add(this.usernametxtbox);
             this.groupBox1.Controls.Add(this.teleftxtbox);
             this.groupBox1.Controls.Add(this.Emailtxtbox);
             this.groupBox1.Controls.Add(this.label6);
@@ -82,6 +87,23 @@
             this.groupBox1.TabIndex = 57;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contact Info";
+            // 
+            // CPRtxtBox
+            // 
+            this.CPRtxtBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPRtxtBox.Location = new System.Drawing.Point(397, 82);
+            this.CPRtxtBox.Name = "CPRtxtBox";
+            this.CPRtxtBox.Size = new System.Drawing.Size(123, 25);
+            this.CPRtxtBox.TabIndex = 41;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(299, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 16);
+            this.label7.TabIndex = 59;
+            this.label7.Text = "CPR- number";
             // 
             // label5
             // 
@@ -99,14 +121,14 @@
             this.passtxtbox.Location = new System.Drawing.Point(94, 211);
             this.passtxtbox.Name = "passtxtbox";
             this.passtxtbox.Size = new System.Drawing.Size(118, 25);
-            this.passtxtbox.TabIndex = 43;
+            this.passtxtbox.TabIndex = 44;
             // 
             // regDateDatePicker
             // 
             this.regDateDatePicker.Location = new System.Drawing.Point(145, 287);
             this.regDateDatePicker.Name = "regDateDatePicker";
             this.regDateDatePicker.Size = new System.Drawing.Size(200, 22);
-            this.regDateDatePicker.TabIndex = 44;
+            this.regDateDatePicker.TabIndex = 45;
             // 
             // label11
             // 
@@ -128,13 +150,13 @@
             this.label8.TabIndex = 58;
             this.label8.Text = "User name";
             // 
-            // usernametxrbox
+            // usernametxtbox
             // 
-            this.usernametxrbox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernametxrbox.Location = new System.Drawing.Point(94, 146);
-            this.usernametxrbox.Name = "usernametxrbox";
-            this.usernametxrbox.Size = new System.Drawing.Size(118, 25);
-            this.usernametxrbox.TabIndex = 42;
+            this.usernametxtbox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernametxtbox.Location = new System.Drawing.Point(94, 146);
+            this.usernametxtbox.Name = "usernametxtbox";
+            this.usernametxtbox.Size = new System.Drawing.Size(118, 25);
+            this.usernametxtbox.TabIndex = 43;
             // 
             // teleftxtbox
             // 
@@ -169,7 +191,7 @@
             this.BranchCombobox.Location = new System.Drawing.Point(94, 97);
             this.BranchCombobox.Name = "BranchCombobox";
             this.BranchCombobox.Size = new System.Drawing.Size(130, 25);
-            this.BranchCombobox.TabIndex = 41;
+            this.BranchCombobox.TabIndex = 42;
             // 
             // label4
             // 
@@ -237,7 +259,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lnametxtbox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lnametxtbox.Location = new System.Drawing.Point(91, 70);
+            this.Lnametxtbox.Location = new System.Drawing.Point(91, 48);
             this.Lnametxtbox.Name = "Lnametxtbox";
             this.Lnametxtbox.Size = new System.Drawing.Size(100, 25);
             this.Lnametxtbox.TabIndex = 51;
@@ -259,22 +281,10 @@
             this.Savebtn.Location = new System.Drawing.Point(778, 450);
             this.Savebtn.Name = "Savebtn";
             this.Savebtn.Size = new System.Drawing.Size(88, 25);
-            this.Savebtn.TabIndex = 58;
+            this.Savebtn.TabIndex = 46;
             this.Savebtn.Text = "Save";
             this.Savebtn.UseVisualStyleBackColor = true;
             this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(91, 264);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
@@ -308,7 +318,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 71);
+            this.label2.Location = new System.Drawing.Point(16, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 48;
@@ -330,6 +340,18 @@
             // picFileDialog
             // 
             this.picFileDialog.FileName = "openFileDialog1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(91, 264);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
             // 
             // CrePrivCusControl
             // 
@@ -365,7 +387,7 @@
         private System.Windows.Forms.DateTimePicker regDateDatePicker;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox usernametxrbox;
+        private System.Windows.Forms.TextBox usernametxtbox;
         private System.Windows.Forms.TextBox teleftxtbox;
         private System.Windows.Forms.TextBox Emailtxtbox;
         private System.Windows.Forms.Label label6;
@@ -384,5 +406,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog picFileDialog;
+        private System.Windows.Forms.TextBox CPRtxtBox;
+        private System.Windows.Forms.Label label7;
     }
 }
