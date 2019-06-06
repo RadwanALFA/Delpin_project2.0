@@ -41,7 +41,7 @@ namespace Delpin_project
 
         private void ProductcomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBox1.DataSource = DataBaseManager.dbmanager.GetBookingbyResourceName(DataBaseManager.dbmanager.GetProductId(ProductcomboBox.Text.Trim()));
+            listBox1.DataSource = DataBaseManager.dbmanager.GetBookingbyResourceId(DataBaseManager.dbmanager.GetProductId(ProductcomboBox.Text.Trim()));
             
             listBox1.DisplayMember = "GetFullInfo";
         }

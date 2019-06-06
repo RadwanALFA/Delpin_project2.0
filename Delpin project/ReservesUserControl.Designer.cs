@@ -44,6 +44,9 @@
             this.EditeSavebtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Cancelbtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ResourceIdtxtbox = new System.Windows.Forms.TextBox();
+            this.ErrorLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 43);
+            this.label1.Location = new System.Drawing.Point(20, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 16);
             this.label1.TabIndex = 0;
@@ -61,7 +64,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(259, 43);
+            this.label2.Location = new System.Drawing.Point(248, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 16);
             this.label2.TabIndex = 1;
@@ -70,7 +73,7 @@
             // FromcomboBox
             // 
             this.FromcomboBox.FormattingEnabled = true;
-            this.FromcomboBox.Location = new System.Drawing.Point(78, 42);
+            this.FromcomboBox.Location = new System.Drawing.Point(67, 105);
             this.FromcomboBox.Name = "FromcomboBox";
             this.FromcomboBox.Size = new System.Drawing.Size(156, 21);
             this.FromcomboBox.TabIndex = 2;
@@ -79,7 +82,7 @@
             // TocomboBox
             // 
             this.TocomboBox.FormattingEnabled = true;
-            this.TocomboBox.Location = new System.Drawing.Point(288, 42);
+            this.TocomboBox.Location = new System.Drawing.Point(277, 105);
             this.TocomboBox.Name = "TocomboBox";
             this.TocomboBox.Size = new System.Drawing.Size(156, 21);
             this.TocomboBox.TabIndex = 3;
@@ -87,7 +90,7 @@
             // 
             // CreateDate
             // 
-            this.CreateDate.Location = new System.Drawing.Point(513, 43);
+            this.CreateDate.Location = new System.Drawing.Point(502, 106);
             this.CreateDate.Name = "CreateDate";
             this.CreateDate.Size = new System.Drawing.Size(200, 20);
             this.CreateDate.TabIndex = 4;
@@ -96,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(474, 45);
+            this.label3.Location = new System.Drawing.Point(463, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 16);
             this.label3.TabIndex = 5;
@@ -191,7 +194,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(740, 42);
+            this.button1.Location = new System.Drawing.Point(729, 105);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
@@ -211,10 +214,43 @@
             this.Cancelbtn.Visible = false;
             this.Cancelbtn.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 16);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Resource Id";
+            // 
+            // ResourceIdtxtbox
+            // 
+            this.ResourceIdtxtbox.Location = new System.Drawing.Point(108, 27);
+            this.ResourceIdtxtbox.Name = "ResourceIdtxtbox";
+            this.ResourceIdtxtbox.Size = new System.Drawing.Size(115, 20);
+            this.ResourceIdtxtbox.TabIndex = 17;
+            this.ResourceIdtxtbox.Leave += new System.EventHandler(this.ResourceIdtxtbox_Leave);
+            // 
+            // ErrorLabel1
+            // 
+            this.ErrorLabel1.AutoSize = true;
+            this.ErrorLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabel1.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel1.Location = new System.Drawing.Point(229, 29);
+            this.ErrorLabel1.Name = "ErrorLabel1";
+            this.ErrorLabel1.Size = new System.Drawing.Size(68, 16);
+            this.ErrorLabel1.TabIndex = 18;
+            this.ErrorLabel1.Text = "Invalid ID";
+            this.ErrorLabel1.Visible = false;
+            // 
             // ReservesUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ErrorLabel1);
+            this.Controls.Add(this.ResourceIdtxtbox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.EditeSavebtn);
@@ -258,5 +294,8 @@
         private System.Windows.Forms.Button EditeSavebtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Cancelbtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox ResourceIdtxtbox;
+        private System.Windows.Forms.Label ErrorLabel1;
     }
 }

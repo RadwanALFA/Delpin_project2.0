@@ -60,12 +60,22 @@ namespace Delpin_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DynamicParameters param = new DynamicParameters();
-            param.Add("@FROM_ID", FromcomboBox.SelectedIndex + 1);
-            param.Add("@TO_ID",TocomboBox.SelectedIndex+1);
-            param.Add("@DATE", CreateDate.Value);
-            DataBaseManager.dbmanager.CreateTransfer(param);
-            FillDataGridView();
+            try
+            {
+                DynamicParameters param = new DynamicParameters();
+                param.Add("@resource_id", int.Parse(ResourceIdtxtbox.Text));
+                param.Add("@FROM_ID", FromcomboBox.SelectedIndex + 1);
+                param.Add("@TO_ID", TocomboBox.SelectedIndex + 1);
+                param.Add("@DATE", CreateDate.Value);
+                DataBaseManager.dbmanager.CreateTransfer(param);
+                MessageBox.Show("Operation completed successfuly","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                FillDataGridView();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void EditeSavebtn_Click(object sender, EventArgs e)
@@ -79,6 +89,13 @@ namespace Delpin_project
                 DataBaseManager.dbmanager.EditeTransfer(param);
                 FillDataGridView();
                 MessageBox.Show("Record updated successfuly", "Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                editeTolabel.Visible = false;
+                EditeDate.Visible = false;
+                EditeTocomboBox.Visible = false;
+                EditeSavebtn.Visible = false;
+                Cancelbtn.Visible = false;
+                EditeDate.Value = DateTime.Now;
+                EditeTocomboBox.Text = "";
             }
             catch (Exception)
             {
@@ -123,6 +140,19 @@ namespace Delpin_project
             FromcomboBox.Text = "";
             TocomboBox.Text = "";
             CreateDate.Value = DateTime.Now;
+        }
+
+        private void ResourceIdtxtbox_Leave(object sender, EventArgs e)
+        {
+            List<int> productsIds = DataBaseManager.dbmanager.GetAllProductsIDs();
+            if (!productsIds.Contains( int.Parse(ResourceIdtxtbox.Text)))
+            {
+                ErrorLabel1.Visible = true;
+            }
+            else
+            {
+                ErrorLabel1.Visible = false;
+            }
         }
     }
 }
