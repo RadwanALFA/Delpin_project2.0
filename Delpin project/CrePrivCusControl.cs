@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
+using System.Text.RegularExpressions;
 
 namespace Delpin_project
 { 
@@ -79,6 +80,58 @@ namespace Delpin_project
             addresstxtbox.Text = "";
             driversLicencecheckBox.Checked = false;
             BranchCombobox.SelectedItem = null; ;
+        }
+
+        private void nametxtbox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (nametxtbox.Text == "" || System.Text.RegularExpressions.Regex.IsMatch(Lnametxtbox.Text, @"\d"))
+                {
+                    ErrorLabel1.Visible = true;
+                }
+                else
+                {
+                    ErrorLabel1.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void Lnametxtbox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Lnametxtbox.Text == ""|| System.Text.RegularExpressions.Regex.IsMatch(Lnametxtbox.Text, @"\d"))
+                {
+                    ErrorLabel2.Visible = true;
+                }
+                else
+                {
+                    ErrorLabel2.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void CPRtxtBox_Leave(object sender, EventArgs e)
+        {
+            if (CPRtxtBox.Text == ""|| Regex.IsMatch(CPRtxtBox.Text, @"^\d+$")== false)
+            {
+                ErrorLabel3.Visible = true;
+            }
+            else
+            {
+                ErrorLabel3.Visible = false;
+            }
         }
     }
 }
