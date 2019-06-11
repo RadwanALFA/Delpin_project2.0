@@ -198,13 +198,25 @@ namespace Delpin_project
                     return true;
                 }
             }
-            else if (bookings.Count >= 2)
+            if (bookings.Count == 2)
             {
-                for (int i = 0; i < bookings.Count; i++)
+                bookings.Sort();
+                if (EndDate.Value < bookings[0].START_DATE || StartDate.Value > bookings[1].END_DATE || bookings[0].END_DATE < StartDate.Value && EndDate.Value < bookings[1].START_DATE)
+                    return true;
+            }
+            else if (bookings.Count > 2)
+            {
+                bookings.Sort();
+                if (StartDate.Value < bookings[0].START_DATE || StartDate.Value > bookings[bookings.Count - 1].END_DATE)
+                    return true;
+                else
                 {
-                    if (bookings[i].END_DATE < StartDate.Value && EndDate.Value < bookings[i + 1].START_DATE || bookings[i].END_DATE < StartDate.Value && bookings[i].END_DATE < EndDate.Value)
+                    for (int i = 0; i < bookings.Count; i++)
                     {
-                        return true;
+                        if (bookings[i].END_DATE < StartDate.Value && EndDate.Value < bookings[i + 1].START_DATE)
+                        {
+                            return true;
+                        }
                     }
                 }
             }

@@ -152,19 +152,22 @@ namespace Delpin_project
                         return true;
                     }
                 }
-                else
-               if (bookings.Count >= 2)
+               if (bookings.Count == 2)
                 {
-                    bookings = Sort(bookings);
-                    for (int i = 0; i < bookings.Count; i++)
+                    bookings.Sort();
+                    if (productEndDate.Value < bookings[0].START_DATE || productStartDate.Value > bookings[1].END_DATE || bookings[0].END_DATE < productStartDate.Value && productEndDate.Value < bookings[1].START_DATE)
+                        return true; 
+                }
+                else if (bookings.Count > 2)
+                {
+                    bookings.Sort();
+                    if (productEndDate.Value < bookings[0].START_DATE || productStartDate.Value > bookings[bookings.Count-1].END_DATE)
+                        return true;
+                    else
                     {
-                        if (productEndDate.Value < bookings[i].START_DATE || productStartDate.Value > bookings[bookings.Count].END_DATE )
+                        for (int i = 0; i < bookings.Count; i++)
                         {
-                            return true;
-                        }
-                        if (productEndDate.Value < bookings[i].START_DATE)
-                        {
-                            if (productStartDate.Value> bookings[i-1].END_DATE && productEndDate.Value < bookings[i].START_DATE)
+                            if (bookings[i].END_DATE < productStartDate.Value && productEndDate.Value < bookings[i + 1].START_DATE)
                             {
                                 return true;
                             }
@@ -179,7 +182,6 @@ namespace Delpin_project
                 return false;
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Clear();
@@ -330,21 +332,6 @@ namespace Delpin_project
                     Check2();
                 }
             }
-        }
-        private List<Booking> Sort(List<Booking> bookings)
-        {
-            Booking temp;
-            for (int i = 0; i < bookings.Count; i++)
-            {
-                if (bookings[i].END_DATE > bookings[i + 1].END_DATE)
-                {
-                     temp = bookings[i + 1];
-                     bookings[i + 1] = bookings[i];
-                     bookings[i] = temp;
-                }
-            }
-            return bookings;
-            
         }
     }
 }
